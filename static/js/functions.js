@@ -38,7 +38,7 @@ $(function(){
         pauseBtn.style.display = "inline";
 
     }
-
+    
     document.querySelectorAll('.main__col').forEach(item =>{
 
         item.addEventListener('click',event=>{
@@ -51,22 +51,28 @@ $(function(){
             let playerArtistComponent = document.getElementsByClassName('player__artist');
 
             playerArtistComponent[0].innerHTML = `
-                <img src="`+image+`" />
+                <img src="/static/`+image+`" />
                 <h3>`+ song + `<br/><span>` + artist + `</span></h3>
             `;
 
             playSong(file);
+
+
+            audioPlayer.onloadstart = () => {                
+                alert(song +' - ' + artist);
+                $('.listening').css('display', 'absolute');
+            }
+
+            audioPlayer.oncanplaythrough = function() {
+                // alert("Can start playing song");
+                audioPlayer.play();
+            /* initProgressBar();*/
+                isPlaying = true;
+                /*alert(audioPlayer.duration);*/
+            };
         })
 
     });
-
-
-    //Utilizar setinterval a cada segundo e atualizar a barra de progresso.
-
-    audioPlayer.onloadstart = ()=>{
-        alert('Loading song.');
-        $('.listening').css('display', 'absolute');
-    }
 
     audioPlayer.oncanplaythrough = function() {
         // alert("Can start playing song");
@@ -130,6 +136,4 @@ $(function(){
         } 
     })
 
-})
-
-
+});
