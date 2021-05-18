@@ -51,7 +51,7 @@ $(function(){
             let playerArtistComponent = document.getElementsByClassName('player__artist');
 
             playerArtistComponent[0].innerHTML = `
-                <img src="/static/`+image+`" />
+                <img src="`+image+`" />
                 <h3>`+ song + `<br/><span>` + artist + `</span></h3>
             `;
 
