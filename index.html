@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Spotify</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="description" content="Esse é um clone da plataforma inicial do Spotify.">
+		<meta name="keywords" content="Spotify">
+		<meta name="author" content="Rubens Zandomenighi">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="sidebar">
+			<div class="sidebar-wraper">
+
+				<div class="sidebar__logo">
+					<img src="img/logo.png" />
+				</div><!--sidebar--logo-->
+
+				<div class="sidebar__menu">
+					<a class="sidebar__menu__selecionado" href="#"><i class="fas fa-home"></i> Home</a>
+					<a href="#"><i class="fas fa-search"></i> Browse</a>
+					<a href="#"><i class="fas fa-wave-square"></i> Radio</a>
+				</div><!--sidebar-menu-->
+
+				<div class="sidebar__menu">
+					<p class="sidebar__menu__title">Playlists</p>
+
+					<div class="sidebar__menu__item">
+						<div class="sidebar__menu__item__componente">
+							<span>+</span>
+						</div>
+						<span>Criar Playlist</span>
+					</div><!--sidebar-menu-item-->
+
+					<div class="sidebar__menu__item">
+						<img src="img/musicas_curtidas.png" />
+						<span>Músicas Curtidas</span>
+					</div><!--sidebar-menu-item-->
+				</div><!--sidebar--menu-->
+
+				<div class="sidebar__playlists">
+					<a href="">Playlist 1</a>
+					<a href="">Playlist 2</a>
+					<a href="">Playlist 3</a>
+					<a href="">Playlist 4</a>
+					<a href="">Playlist 5</a>
+				</div><!--sidebar-playlists-->
+
+				<div class="sidebar__playlists">
+					<a href="">Playlist 6</a>
+					<a href="">Playlist 7</a>
+					<a href="">Playlist 8</a>
+					<a href="">Playlist 9</a>
+					<a href="">Playlist 10</a>
+				</div><!--sidebar-playlists-->
+
+			</div><!--sidebar-wraper-->
+
+		</div><!--sidebar-->
+
+		<div class="main">
+			<div class="main-wraper">
+
+				<div class="main__row">
+					<div class="main__row__title"><h2>Paradas</h2></div>
+
+					<div class="main__col">
+						<img src="img/top50.png" />
+						<h3>As 50 mais tocadas</h3>
+						<p>Aqui vai a descrição da minha música...</p>
+					</div><!--main__col-->
+
+					<div class="main__col">
+						<img src="img/top50global.png" />
+						<h3>As 50 mais tocadas</h3>
+						<p>Aqui vai a descrição da minha música...</p>
+					</div><!--main__col-->
+
+					<div class="main__col">
+						<img src="img/top50.png" />
+						<h3>As 50 mais tocadas</h3>
+						<p>Aqui vai a descrição da minha música...</p>
+					</div><!--main__col-->
+
+					<div class="main__col">
+						<img src="img/top50.png" />
+						<h3>As 50 mais tocadas</h3>
+						<p>Aqui vai a descrição da minha música...</p>
+					</div><!--main__col-->
+
+					<div class="main__col">
+						<img src="img/top50.png" />
+						<h3>As 50 mais tocadas</h3>
+						<p>Aqui vai a descrição da minha música...</p>
+					</div><!--main__col-->
+
+					<div class="main__col">
+						<img src="img/top50.png" />
+						<h3>As 50 mais tocadas</h3>
+						<p>Aqui vai a descrição da minha música...</p>
+					</div><!--main__col-->
+
+					<div class="main__col">
+						<img src="img/top50.png" />
+						<h3>As 50 mais tocadas</h3>
+						<p>Aqui vai a descrição da minha música...</p>
+					</div><!--main__col-->
+
+				</div><!--main_row-->
+
+				<div class="main__row">
+					<div class="main__row__title"><h2>Minhas músicas</h2></div>
+
+					<div class="main__col" data-image="img/gunsrools.png" data-artist="Guns N' Roses" data-song="Sweet Child Of Mine" data-file="assets/sweetchildofmine.mp3" >
+						<img src="img/gunsrools.png" />
+						<h3>This is Guns N' Roses</h3>
+						<p>By Spotify</p>
+					</div><!--main__col-->
+
+					<div class="main__col" data-image="img/rocky.png" data-artist="Rocky Balboa" data-song="Gona Fly" data-file="assets/sweetchildofmine.mp3">
+						<img src="img/rocky.png" />
+						<h3>Rocky Balboa</h3>
+						<p>Aqui vai a descrição da minha música...</p>
+					</div><!--main__col-->
+
+					<div class="main__col" data-image="img/linkinpark.jpg" data-artist="Linkin Park" data-song="In The End" data-file="assets/In-The-End[Official-HD-Music-Video]-Linkin-Park.mp3">
+						<img src="img/linkinpark.jpg" />
+						<h3>This Is Linkin Park</h3>
+						<p>By Spotify</p>
+					</div>
+					<!--main__col-->
+
+				</div><!--main_row-->
+
+			</div><!--main-wraper-->
+
+		</div>
+
+		<div class="player">
+			<div class="player__artist">
+			</div>
+			<div class="player__control">
+				<div class="player__control__buttons">
+					<a href=""><i class="fas fa-backward"></i></a>
+					<a style="display: none;" id="pauseBtn" href="#"><i class="far fa-pause-circle"></i></a>
+					<a id="playBtn" href="#"><i class="far fa-play-circle"></i></a>
+					<a href=""><i class="fas fa-forward"></i></a>
+				</div>
+
+				<div class="player__control__progress">
+					<div  id="progressbar" class="player__control__progress_2"> <!--style="width:0%"-->
+						<div class="pointer"></div>
+					</div>
+				</div>
+
+			</div>
+		</div><!--player-->
+
+		<audio id="audioplayer" style="position: absolute;left: 0;top: 0;z-index: -999;opacity: 0;" controls>
+			
+		</audio>
+
+		<div class="listening"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/all.min.js"></script>
+	<script src="js/functions.js"></script>
+	</body>
+</html>
